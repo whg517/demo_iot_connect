@@ -1,0 +1,13 @@
+default:
+  host: 127.0.0.1
+  port: 8080
+  loglevel: INFO
+  verbose: false
+  debug: false
+  logpath: /tmp/demo_iot_connect
+
+development:
+  loglevel: DEBUG
+production:
+
+
