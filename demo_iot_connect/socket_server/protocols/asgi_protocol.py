@@ -5,7 +5,7 @@ if TYPE_CHECKING:
     from demo_iot_connect.socket_server.server import Config
 
 
-class CustomsSocketProtocol(asyncio.Protocol):
+class CustomsProtocol(asyncio.Protocol):
 
     def __init__(self, config: 'Config'):
         self.app = config.app

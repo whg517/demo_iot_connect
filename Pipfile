@@ -15,6 +15,7 @@ pytest-mock = "*"
 [packages]
 dynaconf = "*"
 uvicorn = "*"
+pydantic = "*"
 
 [requires]
 python_version = "3.7"

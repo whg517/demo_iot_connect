@@ -1,0 +1,1 @@
+CHARACTER = 'utf-8'

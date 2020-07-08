@@ -5,8 +5,7 @@ from typing import Optional
 
 from demo_iot_connect.config import settings
 from demo_iot_connect.socket_server.app import Application
-from demo_iot_connect.socket_server.protocols.socket_protocol import \
-    SocketProtocol
+from demo_iot_connect.socket_server.protocols import SocketProtocol as Protocol
 
 logger = logging.getLogger('socket_server')
 
@@ -46,7 +45,7 @@ class Server:
 
     async def start_up(self) -> AbstractServer:
         server = await self.loop.create_server(
-            protocol_factory=lambda: SocketProtocol(config=self.config),
+            protocol_factory=lambda: Protocol(config=self.config),
             host=self.host,
             port=self.port
         )
